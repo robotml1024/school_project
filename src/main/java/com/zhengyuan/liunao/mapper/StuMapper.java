@@ -5,6 +5,7 @@ import java.util.Map;
 
 import org.apache.ibatis.annotations.Mapper;
 
+import com.zhengyuan.liunao.entity.Scores;
 import com.zhengyuan.liunao.entity.Stu;
 
 @Mapper
@@ -30,4 +31,8 @@ public interface StuMapper {
 	public List<Stu> getStuByNum(String stuno);
 
 	public int updateStu(Map map);
+	
+	public List<Scores> getScoreByStuName(String name);
+	
+	
 }

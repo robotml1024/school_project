@@ -66,4 +66,15 @@
 		 </trim>
 		WHERE id in (select id from (select id from stu where stuno = #{oldNum}) t1 )
 	</update>
+	
+	<select id = "getScoreByStuName" resultType="com.zhengyuan.liunao.entity.Scores">
+		select ss.stuno,s.name,c.coursename,ss.score,ss.type  from stu_sco ss
+inner JOIN course c
+on c.courseid = ss.courseid
+inner join stu s
+on s.stuno = ss.stuno
+where s.name = #{0}
+	</select>
+	
+	
 </mapper>
