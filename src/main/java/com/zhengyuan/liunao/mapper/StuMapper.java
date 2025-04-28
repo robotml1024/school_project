@@ -9,24 +9,21 @@ import com.zhengyuan.liunao.entity.Stu;
 
 @Mapper
 public interface StuMapper {
-	public List<Stu> findStu(String stuno, String psw);
-	public int addStu(Map map);
+	List<Stu> findStu(String stuno, String psw);
 
-	public List<Stu> findAllStu(Map<String, Object> map);
+	int addStu(Map map);
 
-	public List<Stu> findAll();
+	List<Stu> findAllStu(Map<String, Object> map);
 
-	public List<Stu> findStuByName(String name, int start, int pagesize);
+	List<Stu> findAll();
 
-	public int stuCount();
+	List<Stu> findStuByName(String name, int start, int pagesize);
 
-	public List<Stu> echartStu();
+	int stuCount();
 
-	public int deleteByForeach(List<String> stuno);
+	int deleteStu(String stuno);
 
-	public int deleteStu(String stuno);
+	List<Stu> getStuByNum(String stuno);
 
-	public List<Stu> getStuByNum(String stuno);
-
-	public int updateStu(Map map);
+	int updateStu(Map map);
 }

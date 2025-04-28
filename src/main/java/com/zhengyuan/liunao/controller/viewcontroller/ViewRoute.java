@@ -27,23 +27,16 @@ public class ViewRoute {
 	}
 
 	@RequestMapping("/adminIndex")
-	public String adminIndex(HttpSession s) {
-		String perssion = s.getAttribute("role").toString();
-		if(perssion.equals("admin")) {
-			return "adminIndex";
-		}else {
-			return "redirect:/Sys/loginView";
-		}
-	}
+	public String adminIndex() { return "writeDiary"; }
 	
 	@RequestMapping("/stuIndex")
 	public String stuIndex() {
-		return "stuIndex";
+		return "index";
 	}
 	
 	@RequestMapping("/teacherIndex")
 	public String teacherIndex() {
-		return "teacherIndex";
+		return "diary";
 	}
 
 	@RequestMapping("/teacherInfo")

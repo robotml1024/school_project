@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zhengyuan.liunao.mapper.LocationMapper">
+    <select id="selectAllLocations" resultType="com.zhengyuan.liunao.entity.Location">
+        select id, name, type, latitude, longitude, heat, rating, tag from location
+        where type = #{type} and tag = #{tag}
+    </select>
+</mapper>

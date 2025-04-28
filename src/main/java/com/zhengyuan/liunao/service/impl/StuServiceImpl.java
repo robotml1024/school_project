@@ -14,7 +14,7 @@ import com.zhengyuan.liunao.service.StuService;
 public class StuServiceImpl implements StuService{
 
 	@Autowired
-	StuMapper stuMapper;
+	private StuMapper stuMapper;
 	
 	@Override
 	public List<Stu> findStu(String stuno, String psw) {
