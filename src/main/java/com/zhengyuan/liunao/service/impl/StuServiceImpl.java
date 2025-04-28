@@ -6,7 +6,6 @@ import java.util.Map;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.zhengyuan.liunao.entity.Scores;
 import com.zhengyuan.liunao.entity.Stu;
 import com.zhengyuan.liunao.mapper.StuMapper;
 import com.zhengyuan.liunao.service.StuService;
@@ -82,11 +81,4 @@ public class StuServiceImpl implements StuService{
 		// TODO Auto-generated method stub
 		return stuMapper.findAll();
 	}
-
-	@Override
-	public List<Scores> getScoreByStuName(String name) {
-		// TODO Auto-generated method stub
-		return stuMapper.getScoreByStuName(name);
-	}
-
 }

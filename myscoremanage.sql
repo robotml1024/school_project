@@ -13,6 +13,8 @@ File Encoding         : 65001
 Date: 2019-05-27 14:10:49
 */
 
+use school_project;
+
 SET FOREIGN_KEY_CHECKS=0;
 
 -- ----------------------------

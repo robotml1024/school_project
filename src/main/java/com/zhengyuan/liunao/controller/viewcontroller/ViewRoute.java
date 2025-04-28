@@ -13,11 +13,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class ViewRoute {
 	@RequestMapping("/loginView")
 	public String loginView(HttpSession httpSession) {
-		
 		return "login";
 	}
-	
-	
+
 	@RequestMapping("/loginOut")
 	public String loginOut(HttpSession httpSession) {
 		httpSession.removeAttribute("name");
@@ -104,10 +102,7 @@ public class ViewRoute {
 		mav.setViewName("teaModi");
 		return mav;
 	}
-	
-	
-	
-	
+
 	@RequestMapping("/claCouModi")
 	public ModelAndView claCouModi(ModelAndView mav,  @RequestParam("coursename") String coursename,@RequestParam("num") String num) {
 		mav.addObject("num", num);
@@ -116,9 +111,6 @@ public class ViewRoute {
 		mav.setViewName("claCouModi");
 		return mav;
 	}
-	
-	
-
 
 	@RequestMapping("/claCouScore")
 	public String claCouScore() {
@@ -155,6 +147,4 @@ public class ViewRoute {
 	public String announce() {
 		return "announce";
 	}
-	
-	
 }

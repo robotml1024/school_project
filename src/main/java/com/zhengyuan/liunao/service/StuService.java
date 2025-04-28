@@ -3,7 +3,6 @@ package com.zhengyuan.liunao.service;
 import java.util.List;
 import java.util.Map;
 
-import com.zhengyuan.liunao.entity.Scores;
 import com.zhengyuan.liunao.entity.Stu;
 
 public interface StuService {
@@ -26,6 +25,4 @@ public interface StuService {
 	public List<Stu> getStuByNum(String num);
 
 	public int updateStu(Map maps);
-	
-	public List<Scores> getScoreByStuName(String name);
 }
