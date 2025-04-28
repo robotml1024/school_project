@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.alibaba.fastjson.JSON;
-import com.zhengyuan.liunao.entity.Scores;
 import com.zhengyuan.liunao.entity.Stu;
 import com.zhengyuan.liunao.service.StuService;
 import com.zhengyuan.liunao.tools.Layui;
@@ -68,18 +67,12 @@ public class StuInfoDeal {
 			String stuno = allStu.get(i).getStuno();
 			String name = allStu.get(i).getName();
 			String sex = allStu.get(i).getSex();
-			stu.add(new Stu(stuno,name,sex));
 		}
 		int total = stuService.stuCount();
 		System.out.println(total);
 		Layui l = Layui.data(total, stu);
 		return JSON.toJSON(l);
 	}
-
-	
-	
-	
-	
 	
 	@ApiOperation("获取学生的信息")
 	
@@ -158,24 +151,6 @@ public class StuInfoDeal {
 		map.put("psw", SecureUtil.md5(map.get("psw").toString()));
 		stuService.updateStu(map);
 		return "success";
-
-	}
-
-	@RequestMapping("/getScoreByStuName")
-	@ResponseBody
-	public String getScoreByStuName(HttpSession httpSession) {
-		String name = (String) httpSession.getAttribute("name");
-		List<Scores> scoreList = new ArrayList<>();
-		List<Scores> datas = new ArrayList<>();
-		scoreList = stuService.getScoreByStuName(name);
-		for(int i=0;i<scoreList.size();i++) {
-			if(scoreList.get(i).getType().equals("已批改")) {
-				datas.add(scoreList.get(i));
-			}
-		}
-		
-		Layui l = Layui.data(datas.size(), datas);
-		return JSON.toJSONString(l);
 
 	}
 
