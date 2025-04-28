@@ -18,6 +18,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-tomcat</artifactId>
@@ -29,25 +30,30 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-		<!-- servlet依赖. -->
+
+		<!-- servlet依赖.-->
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 		</dependency>
+
 		<!-- tomcat的支持. -->
 		<dependency>
 			<groupId>org.apache.tomcat.embed</groupId>
 			<artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
+
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional> <!-- 这个需要为 true 热部署才有效 -->
 		</dependency>
+
 		<!-- mysql -->
 		<dependency>
 			<groupId>mysql</groupId>
@@ -82,13 +88,11 @@
 			<scope>test</scope>
 		</dependency>
 
-
 		<!--引入 spring-boot-starter-data-redis(1.4版本后)多了个data加个红和粗吧 -->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-redis</artifactId>
 		</dependency>
-
 
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -107,8 +111,6 @@
 			<version>1.9.22</version>
 		</dependency>
 
-
-
 		<!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
 		<dependency>
 			<groupId>com.alibaba</groupId>
@@ -121,7 +123,6 @@
 			<artifactId>commons-fileupload</artifactId>
 			<version>1.3.2</version>
 		</dependency>
-
 
 		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
 		<dependency>
@@ -159,14 +160,12 @@
 			<version>3.9</version>
 		</dependency>
 
-
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml -->
 		<dependency>
 			<groupId>org.apache.poi</groupId>
 			<artifactId>poi-ooxml</artifactId>
 			<version>4.0.1</version>
 		</dependency>
-
 
 		<!-- https://mvnrepository.com/artifact/org.apache.poi/poi-ooxml-schemas -->
 		<dependency>
@@ -182,12 +181,12 @@
 			<version>1.6.1</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>cn.afterturn</groupId>
 			<artifactId>easypoi-base</artifactId>
 			<version>3.0.1</version>
 		</dependency>
+
 		<dependency>
 			<groupId>cn.afterturn</groupId>
 			<artifactId>easypoi-annotation</artifactId>
@@ -200,24 +199,22 @@
 			<version>3.0.1</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-mail</artifactId>
 		</dependency>
-
 
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger2</artifactId>
 			<version>2.2.2</version>
 		</dependency>
+
 		<dependency>
 			<groupId>io.springfox</groupId>
 			<artifactId>springfox-swagger-ui</artifactId>
 			<version>2.2.2</version>
 		</dependency>
-
 
 		<dependency>
 			<groupId>org.apache.shiro</groupId>
@@ -225,15 +222,11 @@
 			<version>1.3.2</version>
 		</dependency>
 
-
 		<dependency>
 			<groupId>cn.hutool</groupId>
 			<artifactId>hutool-all</artifactId>
 			<version>4.0.12</version>
 		</dependency>
-
-
-
 	</dependencies>
 
 	<properties>

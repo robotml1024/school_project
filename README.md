@@ -25,7 +25,7 @@
 完成后，在更新项目：
 右键项目->maven->update project……
 以上编译过程无报错后，选择src/main/java/TestSpboot2Application.java，run as->java application,即可运行。
-首先进入登陆主页：http://localhost:8080/Sys/loginView，进行登陆
+首先进入登陆主页：http://localhost:8080/Sys/loginView
 
 5.	登陆系统的用户名和密码：
 系统所有密码，均已经采用MD5加密。系统admin账号的用户名和密码都是admin。以管理员身份进入管理员界面后，可以更改学生和教师的密码。更改后的密码在后台的控制台内可以查看到。

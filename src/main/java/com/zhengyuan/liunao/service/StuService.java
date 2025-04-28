@@ -6,23 +6,21 @@ import java.util.Map;
 import com.zhengyuan.liunao.entity.Stu;
 
 public interface StuService {
-	public List<Stu> findStu(String stuno, String psw);
-	public int addStu(Map map);
-	public List<Stu> findAllStu(Map<String, Object> map);
+	List<Stu> findStu(String stuno, String psw);
 
-	public List<Stu> findAll();
+	int addStu(Map map);
 
-	public List<Stu> findStuByName(String name, int start, int pagesize);
+	List<Stu> findAllStu(Map<String, Object> map);
 
-	public int stuCount();
+	List<Stu> findAll();
 
-	public List<Stu> echartStu();
+	List<Stu> findStuByName(String name, int start, int pagesize);
 
-	public int deleteByForeach(List<String> stuNO);
+	int stuCount();
 
-	public int deleteStu(String stuNo);
+	int deleteStu(String stuNo);
 
-	public List<Stu> getStuByNum(String num);
+	List<Stu> getStuByNum(String num);
 
-	public int updateStu(Map maps);
+	int updateStu(Map maps);
 }

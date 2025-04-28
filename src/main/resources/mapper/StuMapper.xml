@@ -5,19 +5,14 @@
     <select id="findStu" resultType="com.zhengyuan.liunao.entity.Stu">
       select * from stu where stuno=#{0} and psw=#{1}
     </select>
-
     
      <insert id="addStu" >
         insert into stu(stuno,name,psw,sex,phone,qq,photo)values (#{stuno},#{name},#{psw},#{sex},#{phone},#{qq},#{photo})
     </insert>
-    
-
 
 	 <select id="findAllStu" resultType="com.zhengyuan.liunao.entity.Stu">
       select * from    Stu   order by stuno limit #{start},#{pagesize}
     </select>
-    
-    
 	 
 	  <select id="findAll" resultType="com.zhengyuan.liunao.entity.Stu">
       select * from    Stu  
@@ -31,23 +26,10 @@
 	<select id="stuCount" resultType="Integer">
 		select count(id) from stu
     </select>
-	
-	
-	<select id="echartStu" resultType="com.zhengyuan.liunao.entity.Stu">
-        select * from stu
-    </select>
-    
- 	<delete id="deleteByForeach">
-		delete from stu where stuno in
-		<foreach collection="list" item="num" open="(" close=")" separator=",">
-			#{num}
-		</foreach>
-	</delete>
-	
+
 	<delete id="deleteStu">
 	 	delete  from stu where stuno = #{0}
 	</delete>
-
 
 	<select id = "getStuByNum" resultType="com.zhengyuan.liunao.entity.Stu">
 		select * from stu where stuno= #{stuno}

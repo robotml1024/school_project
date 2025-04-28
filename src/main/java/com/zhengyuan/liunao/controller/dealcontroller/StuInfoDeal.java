@@ -5,8 +5,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.servlet.http.HttpSession;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -21,8 +19,6 @@ import com.zhengyuan.liunao.tools.Layui;
 
 import cn.hutool.crypto.SecureUtil;
 import io.swagger.annotations.Api;
-import io.swagger.annotations.ApiImplicitParam;
-import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
@@ -51,7 +47,6 @@ public class StuInfoDeal {
 		Layui l = Layui.data(total, allStu);
 		return JSON.toJSON(l);
 	}
-
 	
 	@RequestMapping(value = "/getStuSimpleInfo")
 	@ResponseBody
@@ -102,25 +97,6 @@ public class StuInfoDeal {
 		}
 	}
 
-	@RequestMapping("/deleteStus")
-	@ResponseBody
-	public String deleteStus(@RequestParam("nums") Object nums) {
-		String datas = nums.toString();
-		System.out.println(datas);
-		String[] str = datas.split(",");
-		List<String> data = new ArrayList<String>();
-		for (int i = 0; i < str.length; i++) {
-			data.add(str[i]);
-		}
-
-		System.out.println(data.toString());
-		if (stuService.deleteByForeach(data) > 0) {
-			return "success";
-		} else {
-			return "fail";
-		}
-	}
-
 	@RequestMapping("/deleteStu")
 	@ResponseBody
 	public String deleteStu(@RequestParam("num") String num) {
@@ -151,7 +127,5 @@ public class StuInfoDeal {
 		map.put("psw", SecureUtil.md5(map.get("psw").toString()));
 		stuService.updateStu(map);
 		return "success";
-
 	}
-
 }

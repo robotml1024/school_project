@@ -25,7 +25,6 @@ public class WebSecurityConfig extends WebMvcConfigurerAdapter{
 	@Override
 	public  void addInterceptors(InterceptorRegistry registry){
 		InterceptorRegistration addInterceptor = registry.addInterceptor(getSecurityInterceptor());
-
 		//排除配置
 		addInterceptor.excludePathPatterns("/Sys/loginView","/Sys/dealLogin","/Sys/css/**","/Sys/fonts/**","/Sys/images/**","/Sys/js/**","/Sys/lau/**","/Sys/lib/**");
 		//拦截配置
@@ -38,7 +37,7 @@ public class WebSecurityConfig extends WebMvcConfigurerAdapter{
 			HttpSession session = request.getSession(true);
 			//判断是否已有该用户登录的session
 			if(session.getAttribute("name") !=null){
-				return  true;
+				return true;
 			}
 			//跳转到登录页
 			String url = "/Sys/loginView";

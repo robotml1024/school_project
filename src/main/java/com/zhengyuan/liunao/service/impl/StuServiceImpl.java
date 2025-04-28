@@ -47,18 +47,6 @@ public class StuServiceImpl implements StuService{
 	}
 
 	@Override
-	public List<Stu> echartStu() {
-		// TODO Auto-generated method stub
-		return stuMapper.echartStu();
-	}
-
-	@Override
-	public int deleteByForeach(List<String> stuNO) {
-		// TODO Auto-generated method stub
-		return stuMapper.deleteByForeach(stuNO);
-	}
-
-	@Override
 	public int deleteStu(String stuNo) {
 		// TODO Auto-generated method stub
 		return stuMapper.deleteStu(stuNo);
